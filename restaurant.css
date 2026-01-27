@@ -326,13 +326,15 @@ main {
 }
 
 .person {
-  top: 210px;
-  right: 550px;
+  top: 13.125rem;
+  right: 34.375rem;
+  position: absolute;
 }
 
 .lock {
-  top: 280px;
-  right: 550px;
+  top: 17.5rem;
+  right: 34.375rem;
+  position: absolute;
 }
 
 .footer-icons {
@@ -455,11 +457,13 @@ main {
 }
 
 @media screen and (max-width: 750px) {
+  html,body{overflow: hidden;height: 100%;overflow-y: hidden;}
   .form-container {
-    height: auto;
-    max-height: 90vh;
-    width: 80%;
+    width: 80vw;
     margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
   }
 
   .form-container h1 {
@@ -468,15 +472,87 @@ main {
   }
 
   .login-form {
-    padding: 2.5rem;
-  }
+    padding: 2.5rem;}
+
+  .login-form input[type="text"],
+.login-form input[type="password"] {
+  position: relative;      /* reference for icon */
+}
+
+  .person{right: 4rem;top: 8.2rem;position: absolute;}
 }
 
 .form-container {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 750px) and (orientation: landscape){
-  html,body{height: 100%;margin: 0;padding: 0;}
-  .loginpageimg{width: 100%;height: 100vh;object-fit: cover;}
+@media screen and (max-width: 750px) and (orientation: landscape) {
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;   /* prevent horizontal scroll */
+    overflow-y: auto;     /* allow page scroll if form taller than viewport */
+  }
+
+  .loginpageimg {
+    width: 100%;
+    height: 100dvh;       /* use dynamic viewport height to cover full screen */
+    object-fit: cover;
+  }
+
+  .form-container {
+    position: absolute;
+    width: 85vw;          /* slightly smaller than portrait */
+    max-height: 90dvh;    /* container fits within viewport */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 1rem;   /* reduce padding to fit better */
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.6);
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.25);
+    overflow-y: auto;     /* form content does not scroll itself */
+  }
+
+  .form-container h1 {
+    font-size: 2.2rem;    /* slightly smaller to fit landscape */
+    text-align: center;
+    color: blue;
+    margin-bottom: 0.75rem;
+  }
+
+  .login-form {
+    display: grid;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
+
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .login-button1,
+  .facebook-login,
+  .gmail-login {
+    padding: 0.45rem;
+    font-size: 0.85rem;
+  }
+
+  .login-flex {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .login-flex button {
+    flex: 1;
+    padding: 0.45rem;
+  }
 }
