@@ -1,68 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="restaurant.css">
-    <script src="scripts/getdates.js" defer></script>
-    <script src="scripts/restaurant.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="restaurant.css">
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/restaurant.js" defer></script>
 </head>
+
 <body>
   <a id="menu" href="javascript:void(0)">≡</a>
-    <nav class="sidebar">
-        <h2 class="logo">Master Chef</h2>
-        <ul class="navigationham">
-            <li><a href="home.html" >Home</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li class="book-item">
-              <a href="#book-toggle">Book Table</a>
+  <nav class="sidebar">
+    <h2 class="logo">Master Chef</h2>
+    <ul class="navigationham">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li class="book-item">
+        <a href="#book-toggle">Book Table</a>
 
-              <div id="book-toggle" class="book-options">
-                <a href="vip.html">VIP</a>
-                <a href="regular.html">Regular</a>
-              </div>
-              
-            </li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contanct Us</a></li>
-            <li><a href="order.html">Order History</a></li>
-        </ul>
-    </nav>
-   <header class="content kev">
+        <div id="book-toggle" class="book-options">
+          <a href="vip.html">VIP</a>
+          <a href="regular.html">Regular</a>
+        </div>
+
+      </li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contanct Us</a></li>
+      <li><a href="order.html">Order History</a></li>
+    </ul>
+  </nav>
+  <header class="content kev">
     <img src="images/logo.jpg" alt="logo">
     <h1>MASTER CHEF <br> FOOD AND DRINKS</h1>
     <p>₺₦∑ English</p>
-   </header>
-   <main class="content">
+  </header>
+  <main class="content">
     <div class="hero">
+      <picture>
+        <source media="(max-width: 600px)" srcset="images/homehero-small.webp">
+        <source media="(max-width: 1000px)" srcset="images/homehero-medium.webp">
         <img src="images/homehero.jpg" alt="heroimage" class="hero-image">
-        <div class="overlay"></div>
-        <div class="hero-text">
-            <h1>Welcome to Master Chef Restaurant</h1>
-            <p>Delicious meals, cozy ambiance.</p>
-            <a href="book.html" class="cta-btn">Book a Table</a>
-        </div>
+      </picture>
+      <div class="overlay"></div>
+      <div class="hero-text">
+        <h1>Welcome to Master Chef Restaurant</h1>
+        <p>Delicious meals, cozy ambiance.</p>
+        <a href="book.html" class="cta-btn">Book a Table</a>
+      </div>
     </div>
     <section class="features">
       <div class="feature-card">
         <h3>Menu</h3>
         <p>Explore our delicious dishes.</p>
-        <a href="menu.html" >View Menu</a>
+        <a href="menu.html">View Menu</a>
       </div>
-  
+
       <div class="feature-card">
         <h3>Special Offers</h3>
         <p>Check out today's specials.</p>
         <a href="#">See Offers</a>
       </div>
-  
+
       <div class="feature-card">
         <h3>Book a Table</h3>
         <p>Reserve your spot in seconds.</p>
         <a href="book.html">Reserve Now</a>
       </div>
-  
+
       <div class="feature-card">
         <h3>About Us</h3>
         <p>Learn more about our story.</p>
@@ -73,37 +79,38 @@
     <div class="homedishes">
 
       <div class="homecard">
-      <img src="images/chickenwings.jpg" alt="chickenwings">
-      <p>Chicken Wings</p>
-      <p>$20.00</p>
+        <img src="images/chickenwings.jpg" alt="chickenwings">
+        <p>Chicken Wings</p>
+        <p>$20.00</p>
       </div>
 
       <div class="homecard">
-      <img src="images/cocktails.jpg" alt="cocktails">
-      <p>Cocktails</p>
-      <p>$15.00</p>
+        <img src="images/cocktails.jpg" alt="cocktails">
+        <p>Cocktails</p>
+        <p>$15.00</p>
       </div>
 
       <div class="homecard">
-      <img src="images/drumsticks.jpg" alt="drumsticks">
-      <p>DrumSticks</p>
-      <p>$23.00</p>
+        <img src="images/drumsticks.jpg" alt="drumsticks">
+        <p>DrumSticks</p>
+        <p>$23.00</p>
       </div>
 
       <div class="homecard">
-      <img src="images/pizza.jpg" alt="pizza">
-      <p>Pizza</p>
-      <p>$11.00</p>
+        <img src="images/pizza.jpg" alt="pizza">
+        <p>Pizza</p>
+        <p>$11.00</p>
       </div>
     </div>
-   </main> 
-   <footer class="content footer">
+  </main>
+  <footer class="content footer">
     <p>©Kevin Hilary <span id="currentYear"></span>, All Rights Reserved</p>
     <div class="footer-icons">
       <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.jpg" alt="instagram"></a>
       <a href="https://www.twitter.com/" target="_blank"><img src="images/twitter.jpg" alt="twitter"></a>
       <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.jpg" alt="facebook"></a>
     </div>
-   </footer>
+  </footer>
 </body>
+
 </html>
